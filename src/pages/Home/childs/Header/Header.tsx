@@ -1,8 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
 import { HeaderView } from "./Header.view";
+import { setCityName } from "../../../../store/SearchOptions/SearchOptions.actions";
 
-type HeaderDispatch = { /* your dispatchs */ };
+type HeaderDispatch = {
+	setCityName: typeof setCityName;
+};
 
 export type HeaderProps = HeaderDispatch;
 
@@ -11,7 +14,7 @@ const Header: React.FC<HeaderProps> = (props) => {
 }
 
 const mapDispatchToProps: HeaderDispatch = {
-	// your dispatchs
+	setCityName,
 };
 
 export default connect(undefined, mapDispatchToProps)(Header);
