@@ -1,7 +1,10 @@
 import { combineReducers } from "redux";
+import { weather } from "./Weather/Weather.reducer";
+import { searchOptions } from "./SearchOptions/SearchOptions.reducer";
 
 export const rootReducer = combineReducers({
-	// список reducer'ов
+	weather,
+	searchOptions,
 });
 
 export type AppState = ReturnType<typeof rootReducer>;
