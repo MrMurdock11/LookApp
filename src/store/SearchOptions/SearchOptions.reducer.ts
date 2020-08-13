@@ -6,6 +6,8 @@ export const searchOptions = (state = initState, action: Actions): State => {
 	switch(action.type) {
 		case Keys.SET_CITY_NAME:
 			return {...state, cityName: action.cityName !== "" ? action.cityName : initState.cityName};
+		case Keys.SET_LANGUAGE:
+			return {...state, lang: action.language};
 		default:
 			return state;
 	}

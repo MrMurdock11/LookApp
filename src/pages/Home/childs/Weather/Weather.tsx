@@ -7,6 +7,7 @@ import { getWeather } from "./handlers/GetWeather";
 import { initCurrentWeather } from "../../../../store/Weather/Weather.actions";
 import { Loader } from "../../../../components/Loader";
 import { NotFound } from "../../../../components/NotFound";
+import { Language } from "../../../../store/SearchOptions/SearchOptions.state";
 
 type WeatherState = {
 	description: string;
@@ -14,6 +15,7 @@ type WeatherState = {
 	temperature: number;
 	iconName: string;
 	cityNameForSearch: string;
+	languageForSearch: Language;
 	country: string;
 };
 
@@ -29,7 +31,7 @@ const Weather: React.FC<WeatherProps> = (props) => {
 
 	useEffectAsync(async() => {
 		try {
-			const response = await getWeather(props.cityNameForSearch);
+			const response = await getWeather(props.cityNameForSearch, props.languageForSearch);
 			setIsLoaded(true);
 			setHasError(false);
 			
@@ -37,7 +39,7 @@ const Weather: React.FC<WeatherProps> = (props) => {
 		} catch(error) {
 			setHasError(true);
 		}
-	}, [props.cityNameForSearch]);
+	}, [props.cityNameForSearch, props.languageForSearch]);
 
 	return (
 		hasError ? <NotFound /> : (isLoaded ? <WeatherView {...props} /> : <Loader />)
@@ -51,9 +53,9 @@ const mapStateToProps = (state: AppState): WeatherState => {
 	const iconName = state.weather.weather[0].icon;
 	const country = state.weather.sys.country;
 
-	const {cityName: cityNameForSearch} = state.searchOptions;
+	const {cityName: cityNameForSearch, lang: languageForSearch} = state.searchOptions;
 
-	return {temperature, cityName, description, iconName, cityNameForSearch, country};
+	return {temperature, cityName, description, iconName, cityNameForSearch, country, languageForSearch};
 }
 
 const mapDispatchToProps: WeatherDispatch = {
