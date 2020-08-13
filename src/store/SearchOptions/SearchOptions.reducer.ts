@@ -5,7 +5,7 @@ import { initState, State } from "./SearchOptions.state";
 export const searchOptions = (state = initState, action: Actions): State => {
 	switch(action.type) {
 		case Keys.SET_CITY_NAME:
-			return {...state, cityName: action.cityName};
+			return {...state, cityName: action.cityName !== "" ? action.cityName : initState.cityName};
 		default:
 			return state;
 	}

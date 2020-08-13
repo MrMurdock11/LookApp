@@ -1,0 +1,13 @@
+.container {
+	display: flex;
+	justify-content: center;
+	padding-top: 90px;
+}
+
+.not_found {
+	width: 420px;
+	height: 280px;
+	background-image: url(./contents/not-found.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}

@@ -5,8 +5,8 @@ import { AppState } from "../../../../store";
 import { useEffectAsync } from "../../../../common/useEffectAsync";
 import { getWeather } from "./handlers/GetWeather";
 import { initCurrentWeather } from "../../../../store/Weather/Weather.actions";
-import { WeatherType } from "../../../../store/Weather/Weather.state";
-import { Loader } from "./Loader.view";
+import { Loader } from "../../../../components/Loader";
+import { NotFound } from "../../../../components/NotFound";
 
 type WeatherState = {
 	description: string;
@@ -24,16 +24,21 @@ export type WeatherProps = WeatherState & WeatherDispatch;
 
 const Weather: React.FC<WeatherProps> = (props) => {
 	const [isLoaded, setIsLoaded] = useState(false);
+	const [hasError, setHasError] = useState(false)
 
 	useEffectAsync(async() => {
-		const response = await getWeather(props.cityNameForSearch);
-		setIsLoaded(true);
-
-		props.initWeather(response);
+		try {
+			const response = await getWeather(props.cityNameForSearch);
+			setIsLoaded(true);
+	
+			props.initWeather(response);
+		} catch(error) {
+			setHasError(true);
+		}
 	}, [props.cityNameForSearch]);
 
 	return (
-		isLoaded ? <WeatherView {...props} /> : <Loader />
+		hasError ? <NotFound /> : (isLoaded ? <WeatherView {...props} /> : <Loader />)
 	);
 }
 
