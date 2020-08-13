@@ -4,53 +4,68 @@
 	font-family: Arial, Helvetica, sans-serif;
 }
 
-.wrapper {
+.weather {
 	width: 680px;
 	display: grid;
-	grid-auto-rows: max-content;
-	grid-row-gap: 1rem;
-	justify-content: center;
-	padding-top: 110px;
+	grid-template-columns: 1fr max-content;
+	padding-top: 90px;
 }
 
-.wrapper_title {
+/* Information */
+
+.information {
 	display: grid;
-	grid-template-columns: max-content max-content;
-	grid-gap: 10px;
+	grid-row-gap: 15px;
+	grid-template-rows: max-content max-content max-content;
+}
+
+.cityName {
+	font-size: 36px;
+}
+
+.currentDate,
+.description span {
+	font-size: 18px;
 	color: #363636;
 }
 
-.city {
-	height: 66px;
-	font-size: 48px;
-	line-height: 66px;
-}
-
-.icon {
-	height: 66px;
+.currentDate {
+	color: #9d9d9d;
 }
 
 .description {
-	font-size: 18px;
-	text-align: center;
-	color: #363636;
+	display: flex;
+	height: 67px;
+	align-items: center;
 }
 
-.wrapper_temperature {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
+.description > img {
+	height: 67px;
 }
+
+/* .icon {
+	
+} */
+
+/* Temperature */
 
 .temperature {
-	font-size: 180px;
+	display: flex;
+}
+
+.value {
+	font-size: 160px;
 	color: #00b4db;
 }
 
-.celsius_icon {
-	width: 47px;
-	height: 47px;
-	background-image: url(./contents/celsius.svg);
-	background-size: contain;
-	margin-top: 15px;
+.celsiusIndicator {
+	width: 20px;
+	height: 20px;
+	border: 5px solid #00b4db;
+	border-radius: 25px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+	margin-top: 20px;
 }

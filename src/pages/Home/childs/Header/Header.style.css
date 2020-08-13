@@ -17,9 +17,11 @@
 }
 
 .logo {
-	width: 82px;
-	height: 40px;
+	width: 67px;
+    height: 32px;
 	background-image: url(./contents/logo.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
 }
 
 .search {
