@@ -28,7 +28,7 @@ const Weather: React.FC<WeatherProps> = (props) => {
 		const {temp} = response.main;
 
 		props.initWeather(main as WeatherType, description, icon, response.name, temp);
-	}, []);
+	}, [props.cityNameForSearch]);
 
 	return <WeatherView {...props} />
 }
