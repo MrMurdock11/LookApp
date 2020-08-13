@@ -16,8 +16,25 @@
 
 ### Демонстрация работы сервиса
 
-Изображение основной страницы
-![Основная страница](https://skr.sh/s3d3gLlq0Gn?a)
+##### Изображение основной страницы.
+
+![Основная страница](https://raw.githubusercontent.com/MrMurdock11/LookApp/develop/README/weather.jpg)
+
+##### Поисковая строка для ввода города.
+
+При вводе города необходимо нажать клавишу `Enter` для выполнения поиска погоды по искомому запросу.
+
+![Поисковая строка](https://raw.githubusercontent.com/MrMurdock11/LookApp/develop/README/search.jpg)
+
+##### Кнопка для смены языка.
+
+![Кнопка смены языка](https://raw.githubusercontent.com/MrMurdock11/LookApp/develop/README/language.jpg)
+
+##### Информация о погоде для выбранного региона.
+
+![Информация о погоде на русском](https://raw.githubusercontent.com/MrMurdock11/LookApp/develop/README/weather-info-ru.jpg)
+
+![Информация о погоде на английском](https://raw.githubusercontent.com/MrMurdock11/LookApp/develop/README/weather-info-en.jpg)
 
 ### Процесс работы
 
@@ -35,4 +52,5 @@
 
 1. Необходимо выгрузить репозиторий с GitHub.
 1. Перейдя в каталог с проектом необходимо выполнить команду `npm i` or `npm install`.
-1. После выгрузки всех библиотек выполняется последний шаг - `npm run dev`. Запустится сервис и отобразиться в окне браузера установленного по умолчанию.
+1. После выгрузки всех библиотек выполняется последний шаг - `npm run dev`.
+1. Запустится сервис и отобразиться в окне браузера установленного по умолчанию.
