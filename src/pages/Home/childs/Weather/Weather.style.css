@@ -69,3 +69,14 @@
 	-o-border-radius: 25px;
 	margin-top: 20px;
 }
+
+/* Loader */
+
+.loader {
+	background-image: url(./contents/loader.svg);
+	background-repeat: no-repeat;
+	width: 280px;
+	height: 280px;
+	margin: 40px auto 0 auto;
+	background-size: contain;
+}

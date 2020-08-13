@@ -8,18 +8,34 @@ export enum WeatherType {
 	CLOUDS = "Clouds",
 }
 
+export type Weather = {
+	main: WeatherType,
+	description: string,
+	icon: string,
+}
+
 export type State = {
-	type: WeatherType;
-	description: string;
-	iconName: string;
-	cityName: string;
-	temperature: number;
+	weather: Weather[],
+	main: {
+		temp: number,
+	},
+	sys: {
+		country: string,
+	}
+	name: string,
 };
 
 export const initState: State = {
-	type: WeatherType.RAIN,
-	description: "Небольшой проливной дождь",
-	iconName: "04d",
-	cityName: "Москва",
-	temperature: 0,
+	weather: [{
+		main: WeatherType.RAIN,
+		description: "Небольшой проливной дождь",
+		icon: "04d",
+	}],
+	sys: {
+		country: "RU"
+	},
+	name: "Москва",
+	main: {
+		temp: 0,
+	}
 };

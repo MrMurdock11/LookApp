@@ -1,15 +1,11 @@
 import { Keys } from "./Weather.keys";
-import { WeatherType } from "./Weather.state";
+import { State } from "./Weather.state";
 
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 
-export const initWeather = (weatherType: WeatherType, description: string, iconName: string, cityName: string, temperature: number) => {
+export const initCurrentWeather = (currentWeather: State) => {
 	return {
-		type: Keys.INIT_WEATHER,
-		weatherType, 
-		description,
-		iconName,
-		cityName,
-		temperature,
+		type: Keys.INIT_CURRENT_WEATHER,
+		currentWeather,
 	} as const;
 }
