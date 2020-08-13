@@ -16,27 +16,27 @@
 
 ### Демонстрация работы сервиса
 
-[![Видео с демонстрацией работы сервиса](https://raw.githubusercontent.com/MrMurdock11/LookApp/develop/.README/download-btn.png)](https://raw.githubusercontent.com/MrMurdock11/LookApp/develop/.README/weather.mp4)
+[![Скачать видео демонстрации](.README/download-btn.png)](.README/weather.mp4)
 
 ##### Изображение основной страницы.
 
-![Основная страница](https://raw.githubusercontent.com/MrMurdock11/LookApp/develop/.README/weather.jpg)
+![Основная страница](.README/weather.jpg)
 
 ##### Поисковая строка для ввода города.
 
 При вводе города необходимо нажать клавишу `Enter` для выполнения поиска погоды по искомому запросу.
 
-![Поисковая строка](https://raw.githubusercontent.com/MrMurdock11/LookApp/develop/.README/search.jpg)
+![Поисковая строка](.README/search.jpg)
 
 ##### Кнопка для смены языка.
 
-![Кнопка смены языка](https://raw.githubusercontent.com/MrMurdock11/LookApp/develop/.README/language.jpg)
+![Кнопка смены языка](.README/language.jpg)
 
 ##### Информация о погоде для выбранного региона.
 
-![Информация о погоде на русском](https://raw.githubusercontent.com/MrMurdock11/LookApp/develop/.README/weather-info-ru.jpg)
+![Информация о погоде на русском](.README/weather-info-ru.jpg)
 
-![Информация о погоде на английском](https://raw.githubusercontent.com/MrMurdock11/LookApp/develop/.README/weather-info-en.jpg)
+![Информация о погоде на английском](.README/weather-info-en.jpg)
 
 ### Процесс работы
 
