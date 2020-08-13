@@ -14,6 +14,7 @@ type WeatherState = {
 	temperature: number;
 	iconName: string;
 	cityNameForSearch: string;
+	country: string;
 };
 
 type WeatherDispatch = {
@@ -30,7 +31,8 @@ const Weather: React.FC<WeatherProps> = (props) => {
 		try {
 			const response = await getWeather(props.cityNameForSearch);
 			setIsLoaded(true);
-	
+			setHasError(false);
+			
 			props.initWeather(response);
 		} catch(error) {
 			setHasError(true);
@@ -47,10 +49,11 @@ const mapStateToProps = (state: AppState): WeatherState => {
 	const cityName = state.weather.name;
 	const description = state.weather.weather[0].description;
 	const iconName = state.weather.weather[0].icon;
+	const country = state.weather.sys.country;
 
 	const {cityName: cityNameForSearch} = state.searchOptions;
 
-	return {temperature, cityName, description, iconName, cityNameForSearch};
+	return {temperature, cityName, description, iconName, cityNameForSearch, country};
 }
 
 const mapDispatchToProps: WeatherDispatch = {
