@@ -18,9 +18,12 @@ export type State = {
 	weather: Weather[],
 	main: {
 		temp: number,
+		feels_like: number,
 	},
 	sys: {
 		country: string,
+		sunrise: number,
+		sunset: number,
 	}
 	name: string,
 };
@@ -32,10 +35,13 @@ export const initState: State = {
 		icon: "04d",
 	}],
 	sys: {
-		country: "RU"
+		country: "RU",
+		sunrise: 1597283887,
+		sunset: 1597338646,
 	},
 	name: "Москва",
 	main: {
 		temp: 0,
+		feels_like: 0,
 	}
 };

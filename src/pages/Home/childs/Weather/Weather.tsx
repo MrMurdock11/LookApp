@@ -16,6 +16,9 @@ type WeatherState = {
 	iconName: string;
 	cityNameForSearch: string;
 	languageForSearch: Language;
+	feelsLike: number,
+	sunrise: number,
+	sunset: number,
 	country: string;
 };
 
@@ -47,15 +50,26 @@ const Weather: React.FC<WeatherProps> = (props) => {
 }
 
 const mapStateToProps = (state: AppState): WeatherState => {
-	const temperature = state.weather.main.temp;
+	const {temp: temperature, feels_like: feelsLike} = state.weather.main;
 	const cityName = state.weather.name;
 	const description = state.weather.weather[0].description;
 	const iconName = state.weather.weather[0].icon;
-	const country = state.weather.sys.country;
+	const {country, sunset, sunrise} = state.weather.sys;
 
 	const {cityName: cityNameForSearch, lang: languageForSearch} = state.searchOptions;
 
-	return {temperature, cityName, description, iconName, cityNameForSearch, country, languageForSearch};
+	return {
+		feelsLike,
+		sunrise,
+		sunset,
+		temperature,
+		cityName,
+		description,
+		iconName,
+		cityNameForSearch,
+		country,
+		languageForSearch
+	};
 }
 
 const mapDispatchToProps: WeatherDispatch = {

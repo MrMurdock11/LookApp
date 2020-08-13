@@ -53,7 +53,7 @@
 	display: flex;
 }
 
-.value {
+.temperature > .value {
 	font-size: 160px;
 	color: #00b4db;
 }
@@ -68,4 +68,52 @@
 	-ms-border-radius: 25px;
 	-o-border-radius: 25px;
 	margin-top: 20px;
+}
+
+.temperature > .divider {
+	font-size: 40px;
+	margin: 100px 10px 0 5px;	
+}
+
+.feelsLike {
+	margin-top: 100px;
+	font-size: 40px;
+}
+
+/* Sunrise and sunset */
+
+.sunriseAndSunset {
+	display: flex;
+}
+
+.sunriseAndSunset > * + * {
+	margin-left: 20px;
+}
+
+.sunrise,
+.sunset {
+	display: flex;
+	height: 24px;
+	align-items: center;
+}
+
+.sunrise > * + *,
+.sunset > * + * {
+	margin-left: 5px;
+}
+
+.sunrise > .icon,
+.sunset > .icon {
+	width: 24px;
+	height: 24px;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.sunrise > .icon {
+	background-image: url(./contents/sunrise.svg);
+}
+
+.sunset > .icon {
+	background-image: url(./contents/sunset.svg);
 }
