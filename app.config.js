@@ -1,3 +1,3 @@
 window.config = {
-	api: "http://localhost/WikiPravda/api/pages/getType"
+	weatherApiKey: "9bb2e166b25e0ce0735f64b8cf205ef2",
 };

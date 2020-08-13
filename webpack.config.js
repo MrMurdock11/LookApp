@@ -82,6 +82,6 @@ module.exports = {
 		historyApiFallback: true,
 	},
 	externals: {
-		'./config': 'config'
+		'config': 'config'
 	}
 };
