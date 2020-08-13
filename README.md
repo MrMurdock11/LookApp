@@ -16,7 +16,7 @@
 
 ### Демонстрация работы сервиса
 
-![Демонстрация работы сервиса](https://raw.githubusercontent.com/MrMurdock11/LookApp/develop/.README/weather.mp4)
+[Видео с демонстрацией работы сервиса](https://raw.githubusercontent.com/MrMurdock11/LookApp/develop/.README/weather.mp4)
 
 ##### Изображение основной страницы.
 
